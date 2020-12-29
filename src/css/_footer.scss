@@ -1,0 +1,47 @@
+.footer {
+    font-size: 16px;
+    padding-top: 75px; 
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100vw;      
+        left: 0;        
+        height: 2px;
+        top:0;
+        background: rgba($brand-primary, 0.2);
+    }    
+
+    &__list {
+        &__title {
+            margin-bottom: 25px;
+        }
+
+        &__item {
+            padding: 10px 0px;
+        }
+    } 
+    
+    &__row {
+        &_top {
+            padding-bottom: 100px;
+        }
+    }
+
+    &__social {
+        &_circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(#212353, 0.1);
+            margin: 0 7px;
+            transition: all ease-in-out 0.2s;
+            cursor: pointer;
+
+            &:hover {
+                background: rgba(#212353, 0.4);
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+
+//mixin to build different arrows
+@mixin arrow($color, $length: 15px, $direction: right) {
+
+    @if $direction == left {
+        margin-right: $length * 0.75;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        padding: 5px; /* Arrow size */
+        top: 0px;
+        left: 10px;
+        box-shadow: 1px -1px 0 1px $color inset;
+        -webkit-box-shadow: 2px -2px $color inset;
+        border: solid transparent;            
+        transition: 0.2s;
+        transform: rotate(225deg); 
+
+        @if $direction == left {
+            transform: rotate(45deg);
+            left: -24px;            
+        }                              
+    }
+    
+    &::after {
+        content: "";
+        height: 2px;
+        width: $length;
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        background: $color;
+
+        @if $direction == left {            
+            left: -20px;            
+        }    
+
+    }
+}
+
+.arrow {
+    display: inline; 
+    position: relative;  
+    transition: margin-left ease-in-out 0.2s;
+    margin-left: 0;    
+    $color: $brand-primary;
+
+    &:hover {
+        margin-left: 10px;
+    }
+
+    &_white {
+        @include arrow($white, 15px, right);
+
+        &_left {
+            @include arrow($white, 22px, left);
+        }
+    }
+
+    &_primary {
+        @include arrow($brand-primary, 15px, right);
+    }
+        
+}

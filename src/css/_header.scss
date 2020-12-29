@@ -1,0 +1,18 @@
+.section {
+    &__top {
+        position: relative;
+        margin-bottom: 100px;
+
+        &__img {
+            width: 60%;
+            top: 15%;
+            position: absolute;
+            right: 0;
+            z-index: -1;
+        }
+
+        h1, p, button {
+            margin: 25px 0px 25px;
+        }
+    }
+}

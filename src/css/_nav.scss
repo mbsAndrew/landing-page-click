@@ -1,0 +1,112 @@
+.nav {
+    display:flex;  
+    align-items: center; 
+    position: sticky; 
+    background: #fff;
+    z-index: 20;
+
+    &__logo {
+        order: 0;
+        flex: 1;
+    }
+
+    &__toggle {
+        
+        &__label {
+            display: block;
+        }
+
+        &__checkbox {
+
+            ~ .nav-list {
+                max-height: 0;
+                transition: max-height 0.2 ease-in-out;
+            }
+
+            &:checked {
+                ~ .nav-list {
+                    max-height: 250px;
+                }
+            }
+        }
+
+        @media screen and (min-width: 425px) {
+            &__label {
+                order: 2;
+                display: none;
+            }
+    
+            $toggle-height: 4px;
+    
+            &__icon {
+                background: #333;
+                display: block;
+                height: $toggle-height;
+                position: relative;
+                transition: all .2s ease-out;
+                width: 18px;
+    
+                &:before {
+                    content: '';
+                    background: #333;
+                    display: block;
+                    top: 10px;
+                    height: $toggle-height;
+                    height: 100%;
+                    position: absolute;
+                    transition: all .2s ease-out;
+                    width: 100%;
+                }
+    
+                &::after{
+                    content: '';
+                    background: #333;
+                    display: block;
+                    bottom: 10px;
+                    height: $toggle-height;
+                    position: absolute;
+                    transition: all .2s ease-out;
+                    width: 100%;
+                }
+            }
+    
+            &__checkbox {
+                display: none;
+            }        
+        }
+
+        
+    }    
+
+    &__list {
+        margin: 0;
+        order: 1;
+        flex: 5;
+        display: flex;     
+        align-items: flex-start;           
+        
+        &__item {
+            display: block;
+            flex: 1;
+            text-align: center;
+            border-bottom: 2px solid transparent;
+            transition: border ease-in-out 0.2s;
+
+            &:hover {
+                border-bottom: 2px solid $brand-primary;
+            }
+
+            &_last {
+                text-align: right;
+                flex: 5
+            }
+
+            a {
+                padding: 15px;
+            }
+        }
+    }
+
+    
+
+}
