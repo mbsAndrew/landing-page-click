@@ -6,6 +6,11 @@
     &__feature {
         background: rgba($brand-secondary, 0.15);
         padding: 0 25px;
+
+        &__img {
+            max-width: 75%;
+            text-align: center;
+        }
     }
 
     &__testimonial {
