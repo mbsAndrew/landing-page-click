@@ -2,6 +2,7 @@ body {
     font-family: Helvetica, sans-serif;
     color: #4B5D68;
     font-size: 18px;
+    overflow-x: hidden;
 }
 
 .img {
@@ -30,6 +31,12 @@ a {
     text-decoration: none;
     color: inherit;
     display: block;
+
+    &.link {        
+        &:hover {
+            color: $brand-primary;
+        }
+    }
 }
 
 h1, h2, h3 {

@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "start": "npm run open",
-    "open": "concurrently \"http-server -a localhost -p 1234\" \"open http://localhost:1234/\""
+    "open": "start http://localhost:1234 & npm run build"
   },
   "author": "Andrew H",
   "license": "ISC",
