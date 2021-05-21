@@ -2,13 +2,12 @@
   "name": "Landing-Page",
   "version": "1.0.0",
   "description": "",
-  "url": "http://localhost:9898",
-  "homepage": "./",
+  "url": "http://localhost:50",  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "start": "npm run open",
-    "open": "start http://localhost:1234 & npm run build"
+    "open": "npm run build & start http://localhost:50"
   },
   "author": "Andrew H",
   "license": "ISC",

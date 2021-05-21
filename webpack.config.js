@@ -5,6 +5,12 @@ module.exports = {
       path: `${__dirname}/dist`,
       filename: 'bundle.js',
     },
+    devServer: {
+      compress: true,
+      hot: true,      
+      port: 8081,
+      publicPath: "/"
+    },
     module:{
         rules:[
                 {
@@ -12,5 +18,5 @@ module.exports = {
                     use:['style-loader','css-loader', 'sass-loader']
                  }
          ]
-      },
+      },    
   };
