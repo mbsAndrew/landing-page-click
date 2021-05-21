@@ -5,7 +5,7 @@
 
     &__feature {
         background: rgba($brand-secondary, 0.15);
-        padding: 0 25px;
+        padding: 0 25px;        
 
         &__img {
             max-width: 75%;
@@ -14,7 +14,7 @@
     }
 
     &__testimonial {
-        background: rgba(156,105,226,1);
+        background: rgba($brand-primary,1);
         overflow: hidden;
         padding-top: 25px;
         padding-bottom: 25px;       

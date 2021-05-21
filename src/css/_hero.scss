@@ -4,10 +4,17 @@
 
     &__title {
         margin: 25px 0;
+        max-width: 45%;
+    }
+
+    &__img {
+        position: absolute;
+        right: 0;
+        max-width: 45vw;
     }
 
     &__desc {
-
+        max-width: 50%;
     }
 
     &__button {
